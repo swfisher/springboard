@@ -1,9 +1,9 @@
-#Capstone Project 1: Extracting Value from Customer Complaints
-##Data Wrangling Report
+# Extracting Value from Customer Complaints
+## Data Wrangling Report
 
 For this project I am using a publicly available dataset of complaints against financial institutions published by the Consumer Financial Protection Bureau. The dataset is luckily very clean and high quality, making the task of preparing it for exploration and modeling very straightforward.
 
-The data is available as csv file from the CFPB website. After obtaining it and loading it into a pandas DataFrame, I found that the DataTypes had not been correctly inferred by default. In order to resolve this, I created a dict with the correct DataTypes and passed it to the astype method of the DataFrame.
+The data is available as csv file from the [CFPB website](https://www.consumerfinance.gov/data-research/consumer-complaints/). After obtaining it and loading it into a pandas DataFrame, I found that the DataTypes had not been correctly inferred by default. In order to resolve this, I created a dict with the correct DataTypes and passed it to the astype method of the DataFrame.
 
 The standard datetime parsing for pandas turned out to be a little slow when processing the entire DataFrame, so I found a solution on stack overflow using memoization to store and look up previously converted dates. This way each unique date only needed to be converted once and previously converted ones are simply referenced in a dictionary. 
 
