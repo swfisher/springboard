@@ -3,3 +3,5 @@
 *.txt
 *.pptx
 .DS_Store
+/capstone_2/data/*
+*.docx
