@@ -5,3 +5,6 @@
 .DS_Store
 /capstone_2/data/*
 *.docx
+**/data
+**/img
+**/docs
